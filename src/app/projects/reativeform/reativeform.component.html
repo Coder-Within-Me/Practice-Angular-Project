@@ -1,0 +1,12 @@
+<h2>Reactive Form</h2>
+
+<form [formGroup]="deatils" (ngSubmit)="ShowDetails()">
+    <input name="Name" placeholder="Enter Name" formControlName="name"> <label *ngIf="show">{{this.deatils.value.name}}</label>
+    <br>
+    <span style="color: red;" *ngIf="uservalidite && uservalidite.invalid && uservalidite.touched">This is required field.</span>
+    <br>
+    <input name="City" placeholder="Enter City" formControlName="city"><label *ngIf="show">{{this.deatils.value.city}}</label>
+    <br><br>
+    <button  [disabled]="deatils.invalid">Show Details</button> 
+</form>
+<button (click)="clear()">Clear</button>

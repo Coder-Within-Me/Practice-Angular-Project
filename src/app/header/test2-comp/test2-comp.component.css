@@ -1,0 +1,22 @@
+
+nav ul{
+    float: left;
+    list-style-type: none;
+    background-color: skyblue;
+    width: 100%;
+}
+
+ul li {
+    display: inline-block;
+    padding: 10px;   
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+li :hover{
+    color: black;
+    font-size: 22px;
+}
