@@ -1,0 +1,30 @@
+.ProjectBlock{
+    padding: 30px;
+    background-color: skyblue;
+    width: 50%;
+    height: 40%;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+table tbody tr td :hover{   
+    color: white;
+    background-color: rgb(30, 175, 233);
+    font-size: 17px;
+}
+
+table {
+    border-collapse: collapse;
+    background-color:lightcyan;
+    width: 96%;
+    margin-left:auto;
+    margin-right:auto;
+    }
+
+table tbody tr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}

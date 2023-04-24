@@ -1,0 +1,52 @@
+table, td, th {  
+    border: 2px solid #ddd;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    background-color:lightcyan;
+    width: 50%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  th, td {
+    padding: 10px;
+  }
+
+  #buttons{
+    background-color: #3ec1ec;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #buttons :hover{
+    color: black;
+  }
+
+  .EditorAddForm{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background-color:azure;
+    padding: 10px;
+    padding-top: 5px;
+    margin-top: 10px;
+    border: solid 2px;
+  }
+
+  .EditorAddForm button{
+    display: inline-block;
+    margin: 15px;
+    margin-left: 0%;
+    width: 8%;
+  }
+
+

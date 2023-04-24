@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-test2-comp',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./test2-comp.component.css']
 })
 export class Test2CompComponent {
+  constructor(private router:Router){}
 
+  navigatetohomepage(){
+    this.router.navigate(['homepage']);
+  }
 }

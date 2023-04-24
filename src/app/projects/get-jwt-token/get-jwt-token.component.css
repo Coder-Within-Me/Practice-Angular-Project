@@ -1,0 +1,7 @@
+
+.outerdiv {
+    width: 60%;
+    margin-left:30%;
+    margin-right:auto;
+    display: flex;
+}

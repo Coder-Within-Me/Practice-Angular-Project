@@ -1,5 +1,52 @@
-<p appStyleChange>Testing Custom Directive</p>
-<span appStyleChange>Testing Custom Directive 2</span>
+
+
+<div>
+    <h1 style="text-align: center;font-family:Comic Sans MS;">Projects</h1>
+</div>
+
+<div class="ProjectDiv">
+    <table>
+        <tbody>  
+            <tr>
+                <td>
+                    <div class="ProjectBlock" (click)="navigatetoangularform()">
+                        <p>Angular Basic Form</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="ProjectBlock" routerLink="reactiveform">
+                        <p>Angular Reactive Form</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="ProjectBlock" routerLink="angularmaterial">
+                        <p>Angular Material UI</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="ProjectBlock" routerLink="todolist">
+                        <p>To Do List</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="ProjectBlock" routerLink="personaldetails">
+                        <p>User Details Form</p>
+                    </div>
+                </td>
+                <!-- <td>
+                    <div class="ProjectBlock" routerLink="getJwtToken">
+                        <p>Get JWT Token</p>
+                    </div>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>  
+</div>
+
+
+
 
 
 

@@ -1,0 +1,39 @@
+
+<h1 style="text-align: center;">Get Token Here</h1>
+
+<div class="outerdiv">
+    <div style="width: 50%;">
+    <p>Please login to get JWT Token :</p>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput #UserName>
+    </mat-form-field>
+    <div *ngIf="displayerror1" style="color: red;">
+        This is required field.
+    </div>
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput #password>
+    </mat-form-field>
+    <div *ngIf="displayerror2" style="color: red;">
+        This is required field.
+    </div>
+    <br>
+    <button mat-raised-button color="primary" (click)="UserLogin(UserName.value,password.value);">Login</button>
+    <button mat-raised-button style="margin-left: 10px;" color="primary" (click)="GetToken(UserName.value,password.value);">Get Token</button>
+    </div>
+    <div style="width: 50%;">
+        <h3>Token :</h3>
+        <br>
+        <mat-form-field class="example-full-width">
+            <textarea matInput #tokenid value="{{token}}"></textarea>
+          </mat-form-field>
+          <!-- <button mat-raised-button color="primary" (click)="CopyToClipboard(tokenid.value);" >Copy To Clipboard</button> -->
+          <mat-icon *ngIf="!toggleCopyIcon" style="margin-left: 10px;" (click)="CopyToClipboard(tokenid.value);">content_copy</mat-icon>
+          <mat-icon *ngIf="toggleCopyIcon" style="margin-left: 10px;">check_circle_outline</mat-icon>
+    </div>
+    
+</div>

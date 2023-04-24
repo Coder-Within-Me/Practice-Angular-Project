@@ -1,0 +1,73 @@
+<app-test2-comp></app-test2-comp>
+<br><br><br>
+
+<h1 style="text-align: center;">User Details</h1>
+
+<table>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Action</th>
+        <tr *ngFor="let i of details">
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+            <td>
+                <div [ngSwitch] = "i.genderID">
+                    <p *ngSwitchCase = "1">Male</p>
+                    <p *ngSwitchCase = "2">Female</p>
+                    <p *ngSwitchCase = "3">Others</p>
+                    <p *ngSwitchDefault>Unknown</p>
+                </div>
+            </td>
+            <td>
+                <button mat-icon-button color="success" style="background-color: white;margin-right: 15px;" (click)="getdetailsbyId(i);">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="warn" style="background-color: white;" (click)="DeleteDataById(i.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td style="border-right-style: hidden;">
+                <p>Page Number : {{pagenumber}}</p>
+                <button id="buttons" (click)="GetPreviousPage()">Previous</button>
+            </td>
+            <td style="border-right-style: hidden;"></td>
+            <td style="border-right-style: hidden;"></td>
+            <td style="border-right-style: hidden;"></td>
+            <td>
+                <p>Total Records : {{totalrecords}}</p>
+                <button id="buttons" (click)="GetNextPage()">Next</button>
+            </td> 
+        </tr>
+</table>
+
+
+<div class="EditorAddForm">
+    <h2>Add / Edit</h2>
+    <form #UserDetailsForm ="ngForm">
+        <label>ID : </label>
+        <input type="number" ngModel [(ngModel)]="id" #idid name="id" readonly/>
+        <br /><br />
+        <label>Name : </label>
+        <input type="text" ngModel [(ngModel)]="name" #nameid name="name" placeholder="Enter Name" />
+        <br /><br />
+        <label>Age : </label>
+        <input type="number" ngModel [(ngModel)]="age" #ageid name="age" placeholder="Enter Age" />
+        <br /><br />
+        <label>Gender : </label>
+        <select ngModel [(ngModel)]="genderID" name="genderID" #gendernameid>
+            <option value="0">Select</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">Others</option>
+          </select>
+        <br /><br />
+        <p style="color: red;">Note : While adding new entry, above mentioned ID will be ignored.</p>
+        <button id="buttons" (click)="InsertAllData(UserDetailsForm.value)">Add New</button>
+        <button id="buttons" [disabled]="IsIdValid" (click)="UpdateData(UserDetailsForm.value,idid.value)">Update</button>
+    </form>
+</div>

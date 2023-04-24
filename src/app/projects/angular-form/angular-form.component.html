@@ -1,20 +1,27 @@
-<h2>My Template Form</h2>
-<form #MyForm="ngForm" (ngSubmit)="getAllDeatils(MyForm.value)">
-    <input type="text" ngModel [(ngModel)]="name" #nameid name="name" placeholder="Enter Name"/>
-<br/><br/>
-<input type="text" ngModel [(ngModel)]="email" #emailid name="email" placeholder="Enter Email Id"/>
-<br/><br/>
-<input type="number" ngModel [(ngModel)]="number" #numberid name="number" placeholder="Enter Number"/>
-<br/><br/>
-<button>Display</button>
-</form>
-<button (click)="clear()">Clear</button>
-<br/>
-<div>
-    <ul>
-        <li>{{userData.name}}</li>
-        <li>{{userData.email}}</li>
-        <li>{{userData.number}}</li>
-    </ul>
-</div>
 
+<app-test2-comp></app-test2-comp>
+<br><br><br>
+
+<div class="routeroutlet">
+    <div>
+        <h2>My Template Form</h2>
+        <form #MyForm="ngForm" (ngSubmit)="getAllDeatils(MyForm.value)">
+            <input type="text" ngModel [(ngModel)]="name" #nameid name="name" placeholder="Enter Name" />
+            <br /><br />
+            <input type="text" ngModel [(ngModel)]="email" #emailid name="email" placeholder="Enter Email Id" />
+            <br /><br />
+            <input type="number" ngModel [(ngModel)]="number" #numberid name="number" placeholder="Enter Number" />
+            <br /><br />
+            <button>Display</button>
+        </form>
+        <button type="button" (click)="clear()">Clear</button>
+        <br />
+        <div>
+            <ul>
+                <li>{{userData.name}}</li>
+                <li>{{userData.email}}</li>
+                <li>{{userData.number}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

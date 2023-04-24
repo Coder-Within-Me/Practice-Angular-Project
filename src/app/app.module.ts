@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HeaderModule} from './header/header.module'
 import {ProjectsModule} from './projects/projects.module'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,24 +9,28 @@ import {FormsModule} from '@angular/forms'
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { PrioritycolorPipe } from './pipes/prioritycolor.pipe';
 import { StyleChangeDirective } from './AngularDirectives/style-change.directive';
+import { PagenotfoundComponent } from './logout/pagenotfound/pagenotfound.component';
+import { HttpClientModule } from '@angular/common/http';
+import {PersonalDetailServiceService} from './services/personal-detail-service.service'
 
 @NgModule({
   declarations: [
     AppComponent,
     TestCompComponent,
     PrioritycolorPipe,
-    StyleChangeDirective
+    StyleChangeDirective,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HeaderModule,
     BrowserAnimationsModule,
     FormsModule,
     MatSlideToggleModule,
-    ProjectsModule
+    ProjectsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PersonalDetailServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

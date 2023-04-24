@@ -11,11 +11,12 @@ ul li {
     padding: 10px;   
 }
 
-li a{
+li div{
     text-decoration: none;
     color: white;
     font-size: 20px;
 }
+
 li :hover{
     color: black;
     font-size: 22px;
